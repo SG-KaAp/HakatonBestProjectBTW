@@ -208,6 +208,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9d4c6f1df7b364cabab54deace01e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialougeSOs:
+  - {fileID: 11400000, guid: 6bd74e326af9bf048a10c4cc7fca2f05, type: 2}
+  - {fileID: 11400000, guid: 7b3c1d71857e0c44289469e1583e4eb5, type: 2}
   dialougeText: {fileID: 690503360}
   dialougeBackground: {fileID: 0}
 --- !u!1 &690503358
