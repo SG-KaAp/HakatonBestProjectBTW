@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float JumpForce = 2;
     private float VelocityX;
     private Vector2 Movement;
-    private bool IsGrounded=false;
+    private bool IsGrounded;
     private Rigidbody2D RigidBody;
     private void Awake() => RigidBody = gameObject.GetComponent<Rigidbody2D>();
     void Update()
