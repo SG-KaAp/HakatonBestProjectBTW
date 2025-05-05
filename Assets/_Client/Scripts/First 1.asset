@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce712faf6f98a64792c3e3475b83717, type: 3}
   m_Name: First 1
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  background: {fileID: -2966200626249415253, guid: f57a57531c1c4be4dbf54b7c314eab74, type: 3}
   phrases:
   - One artem
   - Two artem

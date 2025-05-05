@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce712faf6f98a64792c3e3475b83717, type: 3}
   m_Name: First
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  background: {fileID: 2649847697073447219, guid: 747a65795d23e294387eafa2d63760c2, type: 3}
   phrases:
   - One aboba
   - Two aboba
