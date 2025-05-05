@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float JumpForce = 2;
     [SerializeField] private Collider2D Collider;
     [SerializeField] private LayerMask Ground;
+    [SerializeField] private LayerMask Walls;
+    [SerializeField] private PhysicsMaterial2D WallsMaterial;
     private float VelocityX;
     private Vector2 Movement;
     private Rigidbody2D RigidBody;
@@ -21,7 +23,7 @@ public class PlayerController : MonoBehaviour
     }
     private void UpdateFriction()
     {
-        
+        Collider.sharedMaterial=Collider.IsTouchingLayers(Walls)?WallsMaterial:null;
     }
     private void Jump()
     {   
