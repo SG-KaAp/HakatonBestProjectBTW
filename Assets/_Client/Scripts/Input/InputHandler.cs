@@ -10,11 +10,7 @@ namespace Game.Input
         public static event Action<InputActionMap> OnMapChanged;
         private static PlayerControl _input;
         public static InputAction Movement => _input.Player.Move;
-        public static InputAction Interact => _input.Player.Interact;
-        public static InputAction GrubItem => _input.Player.GrubItem;
-        public static InputAction DialogNextPhrase => _input.Dialog.DialogNextPhrase;
-        public static InputAction DialogEscape => _input.Dialog.Escape;
-        public static InputActionMap Dialog => _input.Dialog;
+        public static InputAction Jump => _input.Player.Jump;
         public static InputActionMap Player => _input.Player;
 
         private void Awake()
