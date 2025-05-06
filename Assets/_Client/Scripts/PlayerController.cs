@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask Ground;
     [SerializeField] private LayerMask Walls;
     [SerializeField] private PhysicsMaterial2D WallsMaterial;
+    [SerializeField] private Animator animatorController;
+    [SerializeField] private AudioSource footstepsAudioSource;
+    [SerializeField] private AudioSource jumpAudioSource;
     private float VelocityX;
     private Vector2 Movement;
     private Rigidbody2D RigidBody;
@@ -25,9 +28,20 @@ public class PlayerController : MonoBehaviour
             transform.eulerAngles = Vector3.zero;
         else if (Movement.x.Equals(-1))
             transform.eulerAngles = Vector3.up * 180;
+        if (Movement.x != 0)
+        {
+            animatorController.SetBool("isRunning", true);
+            if (!footstepsAudioSource.isPlaying)
+                footstepsAudioSource.Play();
+        }
+        else
+            animatorController.SetBool("isRunning", false);
         if (InputHandler.Jump.WasPressedThisFrame() && Collider.IsTouchingLayers(Ground) && CanJump)
         {
             Jump();
+            animatorController.SetTrigger("jump");
+            if (!jumpAudioSource.isPlaying)
+                jumpAudioSource.Play();
         }
     }
 
