@@ -727,6 +727,7 @@ GameObject:
   - component: {fileID: 635508416}
   - component: {fileID: 635508415}
   - component: {fileID: 635508417}
+  - component: {fileID: 635508418}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -855,7 +856,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: 1
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -1041,6 +1042,22 @@ MonoBehaviour:
   translateOnStart: 1
   dialougeSO: {fileID: 11400000, guid: 6cb3b4664c44a84498b93df109687017, type: 2}
   translateFileName: intro
+  translateLanguage: English
+--- !u!114 &635508418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635508409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0100857cde0cecc49a890d970e4b163d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translateOnStart: 1
+  dialougeSO: {fileID: 11400000, guid: 8abceb373f054b24595a9b4f4a109183, type: 2}
+  translateFileName: intro2
   translateLanguage: English
 --- !u!1 &724899144
 GameObject:
@@ -3929,6 +3946,7 @@ GameObject:
   - component: {fileID: 2027878883}
   - component: {fileID: 2027878882}
   - component: {fileID: 2027878881}
+  - component: {fileID: 2027878884}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3997,6 +4015,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2027878884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027878880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f6f3502cbfbda1a9cc3d47e2cbc971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2056424114
 GameObject:
   m_ObjectHideFlags: 0
