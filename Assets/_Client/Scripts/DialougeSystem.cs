@@ -25,6 +25,8 @@ public class DialougeSystem : MonoBehaviour
                 StartCoroutine(TypeText(phrase));
                 yield return new WaitUntil(()=>InputHandler.Jump.WasReleasedThisFrame());
                 StopCoroutine(nameof(TypeText));
+                dialougeText.text = phrase;
+                yield return new WaitForSeconds(1);
             }
         }
         afterDialouge?.Invoke();
