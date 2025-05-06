@@ -21,7 +21,10 @@ public class PlayerController : MonoBehaviour
         Movement = InputHandler.Movement.ReadValue<Vector2>();
         VelocityX = Mathf.Lerp(VelocityX, Movement.x * Speed, 10 * Time.deltaTime);
         RigidBody.linearVelocityX = VelocityX;
-        RigidBody.rotation = Movement.x.Equals(1) ? 90 : -90;
+        if (Movement.x.Equals(1))
+            transform.eulerAngles = Vector3.zero;
+        else if (Movement.x.Equals(-1))
+            transform.eulerAngles = Vector3.up * 180;
         if (InputHandler.Jump.WasPressedThisFrame() && Collider.IsTouchingLayers(Ground) && CanJump)
         {
             Jump();
