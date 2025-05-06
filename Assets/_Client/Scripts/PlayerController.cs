@@ -1,5 +1,6 @@
 using UnityEngine;
 using Game.Input;
+
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float Speed = 10;
@@ -11,25 +12,33 @@ public class PlayerController : MonoBehaviour
     private float VelocityX;
     private Vector2 Movement;
     private Rigidbody2D RigidBody;
-    private bool CanJump=true;
-    private void Awake()=>RigidBody=GetComponent<Rigidbody2D>();
+    private bool CanJump = true;
+
+    private void Awake() => RigidBody=GetComponent<Rigidbody2D>();
+
     private void Update()
     {
-        Movement=InputHandler.Movement.ReadValue<Vector2>();
-        VelocityX=Mathf.Lerp(VelocityX,Movement.x*Speed,10*Time.deltaTime);
-        RigidBody.linearVelocityX=VelocityX;
-        RigidBody.rotation=Movement.x.Equals(1)?90:-90;
-        if(InputHandler.Jump.WasPressedThisFrame()&&Collider.IsTouchingLayers(Ground)&&CanJump)Jump();
+        Movement = InputHandler.Movement.ReadValue<Vector2>();
+        VelocityX = Mathf.Lerp(VelocityX, Movement.x * Speed, 10 * Time.deltaTime);
+        RigidBody.linearVelocityX = VelocityX;
+        RigidBody.rotation = Movement.x.Equals(1) ? 90 : -90;
+        if (InputHandler.Jump.WasPressedThisFrame() && Collider.IsTouchingLayers(Ground) && CanJump)
+        {
+            Jump();
+        }
     }
+
     private void UpdateFriction()
     {
-        Collider.sharedMaterial=Collider.IsTouchingLayers(Walls)?WallsMaterial:null;
+        Collider.sharedMaterial = Collider.IsTouchingLayers(Walls) ? WallsMaterial : null;
     }
+
     private void Jump()
     {   
-        CanJump=false;
+        CanJump = false;
         RigidBody.linearVelocity += JumpForce * Vector2.up;
-        Invoke(nameof(MayIJump),0.25f);
+        Invoke(nameof(MayIJump), 0.25f);
     }
-    private void MayIJump()=>CanJump=true;
+
+    private void MayIJump() => CanJump = true;
 }
