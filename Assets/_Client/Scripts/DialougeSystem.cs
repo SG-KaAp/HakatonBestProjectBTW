@@ -22,8 +22,9 @@ public class DialougeSystem : MonoBehaviour
             dialougeBackground.sprite = dialougeSO.background;
             foreach(string phrase in dialougeSO.phrases)
             {
-                yield return StartCoroutine(TypeText(phrase));
+                StartCoroutine(TypeText(phrase));
                 yield return new WaitUntil(()=>InputHandler.Jump.WasReleasedThisFrame());
+                StopCoroutine(nameof(TypeText));
             }
         }
         afterDialouge?.Invoke();
