@@ -230,6 +230,7 @@ MonoBehaviour:
           m_StringArgument: '[TEST]Game'
           m_BoolArgument: 0
         m_CallState: 2
+  TextSound: {fileID: 8300000, guid: 3f04f9be40459ea4ab6f0eeb97d6eda2, type: 3}
 --- !u!82 &240272161
 AudioSource:
   m_ObjectHideFlags: 0
@@ -579,6 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a303b68d47f95438bb53a0071dfb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SettingsPanel: {fileID: 0}
 --- !u!1 &1018216443
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +592,7 @@ GameObject:
   - component: {fileID: 1018216446}
   - component: {fileID: 1018216445}
   - component: {fileID: 1018216444}
+  - component: {fileID: 1018216447}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -658,6 +661,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1018216447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018216443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f6f3502cbfbda1a9cc3d47e2cbc971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1322959391
 GameObject:
   m_ObjectHideFlags: 0

@@ -897,6 +897,10 @@ MonoBehaviour:
   Ground:
     serializedVersion: 2
     m_Bits: 1
+  Walls:
+    serializedVersion: 2
+    m_Bits: 64
+  WallsMaterial: {fileID: 6200000, guid: 0a61d0075bead0a8c8c05845a4e28339, type: 2}
 --- !u!50 &651363642
 Rigidbody2D:
   serializedVersion: 5

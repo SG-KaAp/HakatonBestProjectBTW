@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
-
+using Game.Input;
 public class DialougeSystem : MonoBehaviour
 {
     [SerializeField] private DialougeSO[] dialougeSOs;
@@ -11,11 +11,9 @@ public class DialougeSystem : MonoBehaviour
     [SerializeField] private Image dialougeBackground;
     [SerializeField] private AudioSource voiceAudioSource;
     [SerializeField] private UnityEvent afterDialouge;
+    [SerializeField] private AudioClip TextSound;
 
-    private void Awake()
-    {
-        StartCoroutine(ShowDialouge());
-    }
+    private void Awake() => StartCoroutine(ShowDialouge());
 
     private IEnumerator ShowDialouge()
     {
@@ -25,18 +23,19 @@ public class DialougeSystem : MonoBehaviour
             foreach(string phrase in dialougeSO.phrases)
             {
                 yield return StartCoroutine(TypeText(phrase));
+                yield return new WaitUntil(()=>InputHandler.Jump.WasReleasedThisFrame());
             }
         }
         afterDialouge?.Invoke();
     }
     private IEnumerator TypeText(string text)
     {
-        dialougeText.text = "";
+        dialougeText.text = null;
         foreach(char c in text.ToCharArray())
         {
-            voiceAudioSource.Play();
+            voiceAudioSource.PlayOneShot(TextSound);
             dialougeText.text += c;
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }
