@@ -210,8 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialougeSOs:
-  - {fileID: 11400000, guid: 6bd74e326af9bf048a10c4cc7fca2f05, type: 2}
-  - {fileID: 11400000, guid: 7b3c1d71857e0c44289469e1583e4eb5, type: 2}
+  - {fileID: 11400000, guid: 6cb3b4664c44a84498b93df109687017, type: 2}
   dialougeText: {fileID: 690503360}
   dialougeBackground: {fileID: 1992701626}
   voiceAudioSource: {fileID: 240272161}
@@ -842,10 +841,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 826448886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1992701626
 MonoBehaviour:
@@ -867,7 +866,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6d8afc9cd5d3fc446adc1135473d1742, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
