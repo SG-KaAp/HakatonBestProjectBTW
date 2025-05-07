@@ -2,3 +2,5 @@ Play
 Settings
 Quit
 Language
+Back
+Control tips\nW/A/S/D - Movement\nSpace - Jump

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce712faf6f98a64792c3e3475b83717, type: 3}
   m_Name: SecondBackground
   m_EditorClassIdentifier: 
-  background: {fileID: 21300000, guid: 47da85091b4e53f479c0ca89593fbf4a, type: 3}
+  background: {fileID: 21300000, guid: a1b693fe1d8b3c04f86d93978937fd63, type: 3}
   phrases:
   - Although we didn't know him personally, I've heard a bunch of stories from other
     chimpanzees who have interacted with him.
