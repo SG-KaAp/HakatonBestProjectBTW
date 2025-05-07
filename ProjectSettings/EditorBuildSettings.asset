@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Client/Scenes/Mixer.unity
     guid: 7ac87544231425a42b86231642294018
+  - enabled: 1
+    path: Assets/_Client/Scenes/GameOutro.unity
+    guid: 6388e8833d43995468a6dc34abed3b91
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: ee559f61344a5821c800095717ad73de, type: 3}
   m_UseUCBPForAssetBundles: 0
