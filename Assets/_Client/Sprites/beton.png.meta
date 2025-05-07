@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      beton_0: -7980591173135389859
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
