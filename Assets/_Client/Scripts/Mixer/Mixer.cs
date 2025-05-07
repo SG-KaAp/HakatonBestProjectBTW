@@ -106,7 +106,7 @@ public class Mixer : MonoBehaviour
 
     void ShowResultPanel()
     {
-        resultText.text = "�� �������: " + createdMixtureName;
+        resultText.text = "Ты получил: " + createdMixtureName;
 
         if (resultImage != null && createdMixtureIcon != null)
             resultImage.sprite = createdMixtureIcon;
