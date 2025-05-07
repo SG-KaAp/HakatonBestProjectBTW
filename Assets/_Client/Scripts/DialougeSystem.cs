@@ -37,7 +37,7 @@ public class DialougeSystem : MonoBehaviour
             if (!c.Equals(' ')&&!c.Equals('.')&&!c.Equals(','))
                 voiceAudioSource.PlayOneShot(TextSound);
             else
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.05f);
             yield return new WaitForSeconds(0.1f);
         }
     }
