@@ -37,8 +37,11 @@ public class DialougeSystem : MonoBehaviour
         dialougeText.text = null;
         foreach(char c in text.ToCharArray())
         {
-            voiceAudioSource.Play();
             dialougeText.text += c;
+            if (!c.Equals(' ')&&!c.Equals('.')&&!c.Equals(','))
+                voiceAudioSource.PlayOneShot(TextSound);
+            else
+                yield return new WaitForSeconds(0.1f);
             yield return new WaitForSeconds(0.1f);
         }
         isTyping = false;
