@@ -1284,14 +1284,17 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6241394169511965479, guid: d504aec1b70d6665f9b8cf152b11319b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1945094970}
   m_SourcePrefab: {fileID: 100100000, guid: d504aec1b70d6665f9b8cf152b11319b, type: 3}
 --- !u!114 &1170277667 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4410811784658770583, guid: d504aec1b70d6665f9b8cf152b11319b, type: 3}
   m_PrefabInstance: {fileID: 1170277666}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1945094962}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12eb22f93cad0265abe640989d9b8b07, type: 3}
@@ -4511,6 +4514,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1945094962 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6241394169511965479, guid: d504aec1b70d6665f9b8cf152b11319b, type: 3}
+  m_PrefabInstance: {fileID: 1170277666}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1945094970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945094962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 901afefdf7297ee4a8d6b2bc09eeb064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectedIngredients:
+  - "\u041A\u043B\u0435\u0439"
+  - "\u0411\u0435\u0442\u043E\u043D"
 --- !u!1 &1951609879
 GameObject:
   m_ObjectHideFlags: 0
@@ -5008,7 +5031,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Lab
+          m_StringArgument: Mixer
           m_BoolArgument: 0
         m_CallState: 2
   Player: {fileID: 1170277667}
