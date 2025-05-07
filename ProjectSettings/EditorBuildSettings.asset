@@ -18,10 +18,10 @@ EditorBuildSettings:
     path: Assets/_Client/Scenes/Level1.unity
     guid: 7666d576344af7647913bca347fad321
   - enabled: 1
-    path: Assets/_Client/Scenes/Level1 most 1.unity
+    path: Assets/_Client/Scenes/Forest.unity
     guid: 3a556d7dd59743d408fd02288b41e196
   - enabled: 1
-    path: Assets/_Client/Scenes/Level1 most.unity
+    path: Assets/_Client/Scenes/Lab.unity
     guid: b3db39f3a1b76434ebdaa1661eda72b6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: ee559f61344a5821c800095717ad73de, type: 3}

@@ -19,23 +19,24 @@ public class PlayerController : MonoBehaviour
 
     private void Awake() => RigidBody=GetComponent<Rigidbody2D>();
 
+    public void StopPlayer()
+    {
+        Speed = 0;
+        JumpForce = 0;
+    }
     private void Update()
     {
         Movement = InputHandler.Movement.ReadValue<Vector2>();
+        UpdateFriction();
         VelocityX = Mathf.Lerp(VelocityX, Movement.x * Speed, 10 * Time.deltaTime);
         RigidBody.linearVelocityX = VelocityX;
         if (Movement.x.Equals(1))
             transform.eulerAngles = Vector3.zero;
         else if (Movement.x.Equals(-1))
             transform.eulerAngles = Vector3.up * 180;
-        if (Movement.x != 0)
-        {
-            animatorController.SetBool("isRunning", true);
-            if (!footstepsAudioSource.isPlaying)
+        if (!footstepsAudioSource.isPlaying && Movement.x != 0)
                 footstepsAudioSource.Play();
-        }
-        else
-            animatorController.SetBool("isRunning", false);
+        animatorController.SetBool("isRunning", !Movement.x.Equals(0) && !Speed.Equals(0));
         if (InputHandler.Jump.WasPressedThisFrame() && Collider.IsTouchingLayers(Ground) && CanJump)
         {
             Jump();
@@ -54,7 +55,7 @@ public class PlayerController : MonoBehaviour
     {   
         CanJump = false;
         RigidBody.linearVelocity += JumpForce * Vector2.up;
-        Invoke(nameof(MayIJump), 0.25f);
+        Invoke(nameof(MayIJump), 0.3f);
     }
 
     private void MayIJump() => CanJump = true;
