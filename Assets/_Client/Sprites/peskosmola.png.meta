@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      peskosmola_0: 1851982453108990171
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

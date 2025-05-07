@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      stalnoi_cement_0: 6192843120308647527
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
