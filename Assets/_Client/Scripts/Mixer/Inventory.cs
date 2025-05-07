@@ -12,11 +12,11 @@ public class Inventory : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); // сохраняем объект при смене сцены
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(gameObject); // защищаем от дубликатов
         }
     }
 
@@ -26,4 +26,3 @@ public class Inventory : MonoBehaviour
             collectedIngredients.Add(ingredient);
     }
 }
-

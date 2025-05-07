@@ -92,7 +92,7 @@ public class Mixer : MonoBehaviour
         }
         else
         {
-            resultText.text = "Нельзя изготовить";
+            resultText.text = "не получилось";
             resultImage.sprite = null;
             resultPanel.SetActive(true);
 
@@ -148,5 +148,4 @@ public class Mixer : MonoBehaviour
         return null;
     }
 }
-
 
