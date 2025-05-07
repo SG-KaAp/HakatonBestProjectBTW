@@ -1351,7 +1351,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: -7570784611016581936, guid: 7c64cc0521bb281499cde7223859aac0, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4548,10 +4548,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 635508413}
     m_Modifications:
-    - target: {fileID: 869536092672892075, guid: 7376e44a900f4f292b7e7361a0f96673, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8291451972516000754, guid: 7376e44a900f4f292b7e7361a0f96673, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Stalnoicement
   m_EditorClassIdentifier: 
   ingredient1: "\u0421\u0442\u0430\u043B\u044C"
-  ingredient2: "\u041C\u0435\u0434"
+  ingredient2: "\u041C\u0451\u0434"
   resultName: "\u0421\u0442\u0430\u043B\u044C\u043D\u043E\u0439 \u0446\u0443\u043C\u0435\u043D\u0442"
   resultIcon: {fileID: 6192843120308647527, guid: c5b968dac2be8db4592748e10c3a110c, type: 3}

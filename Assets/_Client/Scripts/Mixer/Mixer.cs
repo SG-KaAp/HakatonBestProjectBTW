@@ -21,7 +21,7 @@ public class Mixer : MonoBehaviour
     private string selectedIngredient2 = null;
 
     public List<Recipe> recipeList;
-
+    [SerializeField] private string[] Ingrid;
     private readonly Dictionary<(string, string), string> recipes = new()
     {
         { ("Fire", "Water"), "Steam" },
@@ -41,7 +41,7 @@ public class Mixer : MonoBehaviour
         foreach (Transform child in ingredientButtonContainer)
             Destroy(child.gameObject);
 
-        foreach (string ingredient in Inventory.Instance.collectedIngredients)
+        foreach (string ingredient in Ingrid)
         {
             GameObject btnObj = Instantiate(ingredientButtonPrefab, ingredientButtonContainer);
             TextMeshProUGUI btnText = btnObj.GetComponentInChildren<TextMeshProUGUI>();
@@ -92,7 +92,7 @@ public class Mixer : MonoBehaviour
         }
         else
         {
-            resultText.text = "не получилось";
+            resultText.text = "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
             resultImage.sprite = null;
             resultPanel.SetActive(true);
 
@@ -106,7 +106,7 @@ public class Mixer : MonoBehaviour
 
     void ShowResultPanel()
     {
-        resultText.text = "Ты получил: " + createdMixtureName;
+        resultText.text = "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: " + createdMixtureName;
 
         if (resultImage != null && createdMixtureIcon != null)
             resultImage.sprite = createdMixtureIcon;
@@ -117,8 +117,7 @@ public class Mixer : MonoBehaviour
         continueButton.onClick.RemoveAllListeners();
         continueButton.onClick.AddListener(() =>
         {
-            Inventory.Instance.collectedIngredients.Add(createdMixtureName);
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("GameOutro");
         });
     }
 
