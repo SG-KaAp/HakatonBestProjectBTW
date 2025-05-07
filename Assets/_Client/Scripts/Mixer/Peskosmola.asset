@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17f4295dca8c6e948a22fe531fef57c6, type: 3}
+  m_Name: Peskosmola
+  m_EditorClassIdentifier: 
+  ingredient1: "\u0421\u043E\u0441\u043D\u043E\u0432\u0430\u044F \u0441\u043C\u043E\u043B\u0430"
+  ingredient2: "\u041F\u0435\u0441\u043E\u043A"
+  resultName: "\u041F\u0435\u0441\u043A\u043E\u0441\u043C\u043E\u043B\u0430"
+  resultIcon: {fileID: 1851982453108990171, guid: 9c14000c0d1eb724891768857e442f42, type: 3}
